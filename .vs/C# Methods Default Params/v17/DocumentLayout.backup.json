@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mahir\\Desktop\\C# Methods Default Params\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0600E59E-FEC1-4B0E-9F31-F6FA85649D04}|C# Methods Default Params\\C# Methods Default Params.csproj|c:\\users\\mahir\\desktop\\c# methods default params\\c# methods default params\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0600E59E-FEC1-4B0E-9F31-F6FA85649D04}|C# Methods Default Params\\C# Methods Default Params.csproj|solutionrelative:c# methods default params\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mahir\\Desktop\\C# Methods Default Params\\C# Methods Default Params\\Program.cs",
+              "RelativeDocumentMoniker": "C# Methods Default Params\\Program.cs",
+              "ToolTip": "C:\\Users\\mahir\\Desktop\\C# Methods Default Params\\C# Methods Default Params\\Program.cs*",
+              "RelativeToolTip": "C# Methods Default Params\\Program.cs*",
+              "ViewState": "AgIAACYAAAAAAAAAAAAQwF8AAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T07:49:11.03Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
