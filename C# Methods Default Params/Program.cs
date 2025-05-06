@@ -22,7 +22,8 @@ namespace C__Methods_Default_Params
             #region Task1 
             Console.Write("Please enter your number: ");
             int square = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"Your number square is: {SquareOfNumber(square)}");
+            SquareOfNumber(ref square);
+            Console.WriteLine($"Your number square is: {square}");
             #endregion
 
             #region Task2
@@ -30,8 +31,7 @@ namespace C__Methods_Default_Params
             int arrayLength = Convert.ToInt32(Console.ReadLine());
 
             int[] numbers = GetArrayFromUser(arrayLength);
-            int[] squared = ArrayNumbersSquare(numbers);
-
+            ArrayNumbersSquare(numbers, out int[] squared);
             PrintArray(squared);
 
             #endregion
@@ -40,16 +40,17 @@ namespace C__Methods_Default_Params
 
             Console.Write("Please enter a sentence for delete any space: ");
             string word = Console.ReadLine();
-            Console.WriteLine($"Your word without space is: {DeleteSpace(word)}");
+            DeleteSpace(ref word);
+            Console.WriteLine($"Your word without space is: {word}");
 
             #endregion
 
             #region Task4
 
-            int[] newArray = {1,2,3,4,4,5};
-
+            int[] newArray = { 1, 2, 3, 4, 4, 5 };
+            UpdateArray(10, ref newArray);
             Console.WriteLine("Updated array: ");
-            foreach (var item in UpdateArray(10,newArray))
+            foreach (var item in newArray)
                 Console.WriteLine(item);
 
             #endregion
@@ -87,7 +88,13 @@ namespace C__Methods_Default_Params
 
             Console.Write("Please enter number for find prime or composite: ");
             int c = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(PrimeOrComposite(c) ? "Your number is prime" : "Your number is composite");
+
+            bool result = PrimeOrComposite(ref c);
+
+            string message = c <= 1 ? "Your number is neither prime nor composite."
+                                    : (result ? "Your number is prime" : "Your number is composite");
+
+            Console.WriteLine(message);
 
             #endregion
 
@@ -98,27 +105,26 @@ namespace C__Methods_Default_Params
             #endregion
         }
         #region Task1
-        public static int SquareOfNumber(int x)
+        public static int SquareOfNumber(ref int x)
         {
             while (x <= 0)
             {
                 Console.Write("Your number should be natural number: ");
                 x = Convert.ToInt32(Console.ReadLine());
             }
-            return x*x;
+            x *=x;
+            return x;
         }
 
         #endregion
 
         #region Task2
 
-        public static int[] ArrayNumbersSquare(int[] input)
+        public static void ArrayNumbersSquare(int[] input, out int[] squared)
         {
-            int[] squared = new int[input.Length];
+            squared = new int[input.Length];
             for (int i = 0; i < input.Length; i++)
                 squared[i] = input[i] * input[i];
-            return squared;
-
         }
         public static int[] GetArrayFromUser(int length)
         {
@@ -150,33 +156,29 @@ namespace C__Methods_Default_Params
 
         #region Task3
 
-        public static string DeleteSpace(string str)
+        public static void DeleteSpace(ref string str)
         {
             string result = string.Empty;
             for (int i = 0; i < str.Length; i++)
             {
                 if (str[i] != ' ')
-                {
                     result += str[i];
-                }
             }
-            return result;
+            str = result;
         }
 
         #endregion
 
         #region Task4
 
-        public static int[] UpdateArray(int value,  int[] arr)
+        public static void UpdateArray(int value, ref int[] arr)
         {
-            int[] result = new int[arr.Length+1];
+            int[] result = new int[arr.Length + 1];
             for (int i = 0; i < arr.Length; i++)
-            {
                 result[i] = arr[i];
-               
-            }
+
             result[^1] = value;
-            return result;
+            arr = result;
         }
 
         #endregion
@@ -254,25 +256,32 @@ namespace C__Methods_Default_Params
 
         #region Task4
 
-        public static bool PrimeOrComposite(int a)
+        public static bool PrimeOrComposite(ref int number)
         {
-            if (a < 2)
-                return false;
+            bool isPrime = true;
 
-            if (a == 2)
-                return true;
-
-            if (a % 2 == 0)
-                return false;
-
-            for (int i = 3; i * i <= a; i += 2)
+            if (number == 2)
             {
-                if (a % i == 0)
-                    return false;
+                return true;
             }
 
-            return true;
+            if (number % 2 == 0)
+            {
+                isPrime = false;
+            }
+
+            for (int i = 3; i * i <= number; i += 2)
+            {
+                if (number % i == 0)
+                {
+                    isPrime = false;
+                }
+            }
+
+            return isPrime;
         }
+
+
 
         #endregion
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("C# Methods Default Params")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49d8d0b3868c8179b227c8224837464ff747a5db")]
 [assembly: System.Reflection.AssemblyProductAttribute("C# Methods Default Params")]
 [assembly: System.Reflection.AssemblyTitleAttribute("C# Methods Default Params")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

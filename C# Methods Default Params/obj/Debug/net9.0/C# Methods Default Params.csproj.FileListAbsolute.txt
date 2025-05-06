@@ -12,3 +12,4 @@ C:\Users\mahir\Desktop\C# Methods Default Params\C# Methods Default Params\obj\D
 C:\Users\mahir\Desktop\C# Methods Default Params\C# Methods Default Params\obj\Debug\net9.0\C# Methods Default Params.pdb
 C:\Users\mahir\Desktop\C# Methods Default Params\C# Methods Default Params\obj\Debug\net9.0\C# Methods Default Params.genruntimeconfig.cache
 C:\Users\mahir\Desktop\C# Methods Default Params\C# Methods Default Params\obj\Debug\net9.0\ref\C# Methods Default Params.dll
+C:\Users\mahir\Desktop\C# Methods Default Params\C# Methods Default Params\obj\Debug\net9.0\C# Methods Default Params.sourcelink.json
